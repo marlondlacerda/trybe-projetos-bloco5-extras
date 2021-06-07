@@ -10,3 +10,28 @@ body {
   border-radius: 50%;
   border: 2px solid;
 }
+
+#buttons h2 {
+  margin-bottom: 0;
+}
+
+#rgb-color {
+  margin-bottom: 0;
+}
+
+#points {
+  margin-top: 0;
+  display: inline-block;
+}
+
+#score {
+  margin-top: 0;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#buttons button {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 5px;
+}
