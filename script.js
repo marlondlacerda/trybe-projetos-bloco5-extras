@@ -5,6 +5,22 @@ function randomColorGenerator() {
   return (`#${randomColor}`);
 }
 
+function randomSelected() {
+  const randomColorSelected = document.querySelectorAll('.ball');
+  const ballIndex = Math.floor(Math.random() * randomColorSelected.length);
+  let newtext = randomColorSelected[ballIndex].style.backgroundColor;
+  newtext = newtext.replace('rgb', '');
+  return newtext;
+}
+
+function whatColor() {
+  const colorText = document.querySelector('#rgb-placar');
+  const idText = document.createElement('h4');
+  idText.id = 'rgb-color';
+  idText.innerText = randomSelected();
+  colorText.appendChild(idText);
+}
+
 // Cria as divs contendo as balls
 function ballsCreate() {
   const coresSection = document.querySelector('#cores');
@@ -12,11 +28,11 @@ function ballsCreate() {
     const divBalls = document.createElement('div');
     divBalls.className = 'ball';
     divBalls.style.backgroundColor = randomColorGenerator();
-    console.log(coresSection);
     coresSection.appendChild(divBalls);
   }
 }
 
 window.onload = () => {
   ballsCreate();
+  whatColor();
 };
