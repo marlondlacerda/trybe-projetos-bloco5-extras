@@ -5,6 +5,7 @@ function randomColorGenerator() {
   return (`#${randomColor}`);
 }
 
+// Escolhe uma das cores da ball para ser a resposta
 function randomSelected() {
   // source https://stackoverflow.com/questions/7595557/selecting-a-random-html-element-using-javascript-only
   const randomColorSelected = document.querySelectorAll('.ball');
@@ -14,6 +15,7 @@ function randomSelected() {
   return newtext;
 }
 
+// Cria dinamicamente um h4 onde vai ficar o texto rg da cor selecionada para o resultado
 function whatColor() {
   const colorText = document.querySelector('#rgb-color-selected');
   const idText = document.createElement('h4');
@@ -36,6 +38,7 @@ function ballsCreate() {
   }
 }
 
+// Função para resetar e refazer o game
 function resetRemove(resposta) {
   document.getElementById('cores').remove();
   document.getElementById('rgb-color').remove();
@@ -45,6 +48,7 @@ function resetRemove(resposta) {
   whatColor();
 }
 
+// função onde vai ouvir o click e executar uma ação
 function result(click) {
   let colorQuestion = document.querySelector('h4');
   colorQuestion = `rgb${colorQuestion.innerText}`;
@@ -66,6 +70,7 @@ function result(click) {
   }
 }
 
+// Irá criar os botões do roda pé do site
 function buttonsCreate() {
   const footerbuttons = document.querySelector('#buttons');
 
@@ -85,6 +90,7 @@ function buttonsCreate() {
   footerbuttons.appendChild(buttonReset);
 }
 
+// Irá criar dinamicamente o texto onde ficará o placar
 function createPlacar() {
   const main = document.querySelector('#rgb-placar');
   const placar = document.createElement('h4');
