@@ -48,20 +48,34 @@ function resetRemove(resposta) {
   whatColor();
 }
 
-// função onde vai ouvir o click e executar uma ação
-function result(click) {
+function verify(click, resposta) {
   let colorQuestion = document.querySelector('h4');
   colorQuestion = `rgb${colorQuestion.innerText}`;
-  const resposta = document.getElementById('answer');
   const sumPoints = document.getElementById('score');
+  const novoTexto = resposta;
+
+  if (click.target.style.backgroundColor === colorQuestion) {
+    novoTexto.innerText = 'Acertou!';
+    sumPoints.innerText = parseInt(sumPoints.innerText, 10) + 3;
+  } else {
+    novoTexto.innerText = 'Errou! Tente novamente!';
+    sumPoints.innerText = parseInt(sumPoints.innerText, 10) - 1;
+  }
+}
+
+// função onde vai ouvir o click e executar uma ação
+function result(click) {
+  const selecionado = document.querySelector('.selecionado');
+  const resposta = document.getElementById('answer');
 
   if (click.target.classList.contains('ball')) {
-    if (click.target.style.backgroundColor === colorQuestion) {
-      resposta.innerText = 'Acertou!';
-      sumPoints.innerText = parseInt(sumPoints.innerText, 10) + 3;
+    if (selecionado === null) {
+      click.target.classList.add('selecionado');
+      verify(click, resposta);
     } else {
-      resposta.innerText = 'Errou! Tente novamente!';
-      sumPoints.innerText = parseInt(sumPoints.innerText, 10) - 1;
+      selecionado.classList.remove('selecionado');
+      click.target.classList.add('selecionado');
+      verify(click, resposta);
     }
   }
 
