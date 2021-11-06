@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
@@ -17,17 +18,28 @@
       <label for="text-input">
         TEXTO:
       </label>
-        <input
-        type="text"
-        placeholder="blablabla"
-        id="text-input"
-        name="text-input"
-        />
+      <input
+      type="text"
+      placeholder="blablabla"
+      id="text-input"
+      name="text-input"
+      />
+
+      <!-- source https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript -->
+      <label for="meme-insert">
+        Foto:
+      </label>
+      <input type="file"  accept="image/gif, image/jpeg, image/png" name="image"
+      id="meme-insert" />
+
+
+
     </section>
 
     <section>
       <div id="meme-image-container">
-        <span id="meme-text"></span>
+        <img id="meme-image">
+        <p id="meme-text"></p>
       </div>
     </section>
 
