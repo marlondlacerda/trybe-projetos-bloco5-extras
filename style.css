@@ -20,4 +20,14 @@
   position: absolute
 }
 
+#fire {
+  background-color: red;
+}
 
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
