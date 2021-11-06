@@ -20,9 +20,10 @@
       </label>
       <input
       type="text"
-      placeholder="blablabla"
+      placeholder="Frase para o Meme"
       id="text-input"
       name="text-input"
+      maxlength="60"
       />
 
       <!-- source https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript -->
@@ -32,16 +33,23 @@
       <input type="file"  accept="image/gif, image/jpeg, image/png" name="image"
       id="meme-insert" />
 
-
-
     </section>
 
-    <section>
-      <div id="meme-image-container">
+    <section id="meme-image-container">
         <img id="meme-image">
         <p id="meme-text"></p>
       </div>
     </section>
+
+    <section id="meme-backgrounds">
+      <button type="button"></button>
+      <button type="button"></button>
+      <button type="button"></button>
+    </section>
+
+
+
+
 
   </section>
   <script src="script.js"></script>
