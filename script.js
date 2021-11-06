@@ -1,4 +1,5 @@
 const container = document.querySelector('#meme-image-container');
+const preMemes = document.querySelector('#meme-templates').childNodes;
 
 const inputText = document.querySelector('#text-input');
 const inputImg = document.querySelector('#meme-insert');
@@ -29,4 +30,10 @@ water.addEventListener('click', () => {
 
 earth.addEventListener('click', () => {
   container.style.border = '6px groove green';
+});
+
+preMemes.forEach((element) => {
+  element.addEventListener('click', () => {
+    memeImage.src = element.src;
+  });
 });

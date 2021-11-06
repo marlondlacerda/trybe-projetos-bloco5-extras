@@ -31,3 +31,8 @@
 #earth {
   background-color: green;
 }
+
+#meme-templates img {
+  width: 200px;
+  height: 200px;
+}
