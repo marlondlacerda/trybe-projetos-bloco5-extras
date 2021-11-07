@@ -1,15 +1,19 @@
 const container = document.querySelector('#meme-image-container');
 const preMemes = document.querySelector('#meme-templates').childNodes;
 
-const inputText = document.querySelector('#text-input');
 const inputImg = document.querySelector('#meme-insert');
+const inputText = document.querySelector('#text-input');
 
-const memeText = document.querySelector('#meme-text');
 const memeImage = document.querySelector('#meme-image');
+const memeText = document.querySelector('#meme-text');
 
+const earth = document.querySelector('#earth');
 const fire = document.querySelector('#fire');
 const water = document.querySelector('#water');
-const earth = document.querySelector('#earth');
+
+let btnDownload = document.querySelector('.download');
+const save = document.querySelector('#save');
+
 
 inputText.addEventListener('input', () => {
   memeText.innerHTML = inputText.value;
@@ -36,4 +40,13 @@ preMemes.forEach((element) => {
   element.addEventListener('click', () => {
     memeImage.src = element.src;
   });
+});
+
+// source https://dev.to/cjuniordev/transformando-html-em-imagens-2k5e
+save.addEventListener('click', () => {
+  html2canvas(document.querySelector('#meme-image-container')).then(canvas => {
+    btnDownload.href = canvas.toDataURL('image/png');
+    btnDownload.download =  'minha-imagem';
+    btnDownload.click();
+  })
 });

@@ -5,19 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>MEME GENERATOR</title>
 </head>
 <body>
   <section class="container">
 
     <section class="head-title">
-      <h1>MEME GENERATOR</h1>
+      <h1>😎 MEME GENERATOR 😂</h1>
     </section>
 
     <section class="input">
-      <label for="text-input">
-        TEXTO:
-      </label>
+      <label for="text-input">Texto:</label>
       <input
       type="text"
       placeholder="Frase para o Meme"
@@ -35,16 +33,21 @@
 
     </section>
 
+    <section id="meme-backgrounds">
+      <button type="button" id="fire"><img src="./imgs/fire.png">FIRE</button>
+      <button type="button" id="water"><img src="./imgs/water.png">WATER</button>
+      <button type="button" id="earth"><img src="./imgs/earth.png">EARTH</button>
+    </section>
+
     <section id="meme-image-container">
         <img id="meme-image">
         <p id="meme-text"></p>
       </div>
     </section>
 
-    <section id="meme-backgrounds">
-      <button type="button" id="fire">Fire</button>
-      <button type="button" id="water">Water</button>
-      <button type="button" id="earth">Earth</button>
+    <section id="convert-to-img">
+      <button type="button" id="save">Salvar</button>
+      <a class="download"></a>
     </section>
 
     <section id="meme-templates">
@@ -54,9 +57,8 @@
       <img id="meme-4" src="./imgs/meme4.png">
     </section>
 
-
-
   </section>
-  <script src="script.js"></script>
+  <script src="./scripts/html2canvas.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
