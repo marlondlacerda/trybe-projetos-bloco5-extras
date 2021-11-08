@@ -11,14 +11,25 @@
   </header>
   <main>
     <section id="head">
-      <div id="rgb-color-selected"></div>
-      <div id="rgb-placar"></div>
+      <div id="rgb-color-selected">
+        <h4 id="rgb-color"></h4>
+      </div>
+      <div id="rgb-placar">
+        <h4>Placar: <span id="score">0</span></h4>
+      </div>
     </section>
-    <section id="balls">
+
+    <section id="balls-container">
     </section>
-    <section id="buttons">
+    <section id="buttons-container">
+      <h2 id="answer">Escolha uma cor</h2>
+      <div>
+        <button id="hard-mode">HARD MODE: <span id="hard-status">OFF</span></button>
+        <button id="reset-game">Resetar Jogo/Cores</button>
+      </div>
+
     </section>
   </main>
-  <script src="script.js" class="selecionado" ></script>
+  <script src="script.js" class="selected" ></script>
 </body>
 </html>
