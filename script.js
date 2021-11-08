@@ -9,7 +9,7 @@ const localText = document.querySelectorAll('input[name="localText"]');
 const memeImage = document.querySelector('#meme-image');
 const memeText = document.querySelector('#meme-text');
 const preMemes = document.querySelector('#meme-templates').childNodes;
-const save = document.querySelector('#save');
+const save = document.querySelector('.save');
 const water = document.querySelector('#water');
 
 inputText.addEventListener('input', () => {

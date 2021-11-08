@@ -54,7 +54,7 @@
       </section>
 
     <section id="meme-backgrounds">
-      <h3>Backgrounds</h3>
+      <h3>Estilos Customizados</h3>
       <div class="buttons-container">
         <button type="button" id="fire">FIRE</button>
         <button type="button" id="water">WATER</button>
@@ -68,16 +68,24 @@
         <p id="meme-text"></p>
     </section>
 
-    <section id="convert-to-img">
-      <button type="button" id="save">Salvar</button>
+    <section class="convert-to-img">
+      <button type="button" class="save">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">SALVAR MEME</span>
+      </button>
       <a class="download"></a>
     </section>
 
-    <section id="meme-templates">
+    <section class="pre-memes">
+      <h1>Backgrounds</h1>
+    <div id="meme-templates">
       <img id="meme-1" src="./imgs/meme1.png">
       <img id="meme-2" src="./imgs/meme2.png">
       <img id="meme-3" src="./imgs/meme3.png">
       <img id="meme-4" src="./imgs/meme4.png">
+    </div>
     </section>
   </section>
   <script src="./scripts/html2canvas.min.js"></script>
