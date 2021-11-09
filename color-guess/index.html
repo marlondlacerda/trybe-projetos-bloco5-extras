@@ -3,26 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Advinhe a Cor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 id="title">Advinhe a Cor!</h1>
-  </header>
   <main>
+    <header>
+      <h1 id="title">Advinhe a Cor!</h1>
+    </header>
     <section id="head">
-      <div id="rgb-color-selected">
-        <h4 id="rgb-color"></h4>
+      <div>
+        <h3>Cor a ser advinhada:</h3>
+        <div id="rgb-color-selected">
+          <h4 id="rgb-color"></h4>
+        </div>
       </div>
       <div id="rgb-placar">
         <h4>Placar: <span id="score">0</span></h4>
       </div>
     </section>
-
-    <section id="balls-container">
+    <hr>
+    <section id="container-balls">
+      <div id="balls-container">
+      </div>
+      <h3 id="answer">Escolha uma cor</h3>
     </section>
+    <hr>
     <section id="buttons-container">
-      <h2 id="answer">Escolha uma cor</h2>
       <div>
         <button id="hard-mode">HARD MODE: <span id="hard-status">OFF</span></button>
         <button id="reset-game">Resetar Jogo/Cores</button>

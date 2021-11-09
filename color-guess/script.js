@@ -82,8 +82,11 @@ window.onload = () => {
   colorSelected.innerText = selectAColor();
 
   ballsContainer.addEventListener('click', ({ target }) => {
-    const selected = removeRgbText(target.style.backgroundColor);
-    inpector(selected);
+    if (target.tagName === 'BUTTON') {
+      target.className = 'ball selected';
+      const selected = removeRgbText(target.style.backgroundColor);
+      inpector(selected);
+    }
   });
 
   resetGame.addEventListener('click', () => newGame());
