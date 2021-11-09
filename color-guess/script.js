@@ -75,6 +75,7 @@ const changeMode = () => {
   hardModeStatus.innerText = status === 'ON' ? 'OFF' : 'ON';
   ballMaker();
   colorSelected.innerText = selectAColor();
+  answer.innerText = 'Escolha uma cor';
 };
 
 window.onload = () => {
