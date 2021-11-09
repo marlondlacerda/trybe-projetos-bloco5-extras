@@ -39,6 +39,12 @@ const ballMaker = () => {
   }
 };
 
+const changePointsColor = () => {
+  sumPoints.innerText < 0 ? sumPoints.className = 'red-shadow' :
+  sumPoints.innerText > 0 ? sumPoints.className = 'green-shadow' : 
+  sumPoints.className = '';
+
+}
 const inpector = (selected) => {
   const balls = document.querySelectorAll(ball);
   const answerSelected = document.querySelector('#rgb-color').innerText;
@@ -56,6 +62,8 @@ const inpector = (selected) => {
     answer.innerText = 'Errou! Tente novamente!';
     sumPoints.innerText = parseInt(sumPoints.innerText, 10) - 1;
   }
+
+  changePointsColor()
 };
 
 const newGame = () => {
@@ -72,6 +80,14 @@ const newGame = () => {
 
 const changeMode = () => {
   const status = hardModeStatus.innerText;
+  if (status === 'ON') {
+    hardModeStatus.innerText = 'OFF';
+    hardModeStatus.className = 'red-shadow';
+  } else {
+    hardModeStatus.className = 'ON';
+    hardModeStatus.className = 'green-shadow';
+  }
+
   hardModeStatus.innerText = status === 'ON' ? 'OFF' : 'ON';
   ballMaker();
   colorSelected.innerText = selectAColor();

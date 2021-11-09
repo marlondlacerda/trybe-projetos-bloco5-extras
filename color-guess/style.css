@@ -50,6 +50,7 @@ header {
   justify-content: center;
   text-align: center;
   font-size: 2.5em;
+  max-width: 700px;
 
   border: 5px solid rgb(126, 178, 221);
   border-top: none;
@@ -76,13 +77,6 @@ header {
   border: 2px solid;
 }
 
-hr{ 
-  margin: 15px;
-  clear: both;
-  border: 1px solid transparent;
-  height: 0px;
-}
-
 .selected {
   border-color: rgb(126, 178, 221);
 }
@@ -90,33 +84,75 @@ hr{
 #buttons-container { 
   display: flex;
   justify-content: center;
-  max-width: 750px;
   margin: auto;
 }
 
-
-
-
-
-
-  #buttons-container button { 
-    cursor: pointer;
-    font-family: "Share Tech Mono", monospace;
-    color: inherit;
-    font-weight: 700;
-    font-size: 2.5em;
-  }
-  
-  #hard-mode {
-    padding: 15px;
-    border: 5px solid rgb(126, 178, 221);
-    background: radial-gradient(ellipse at center, rgb(24, 66, 150) 0%, #000000 100%);
-    border-radius: 0px 0px 0px 50px;
+#buttons-container button { 
+  cursor: pointer;
+  font-family: "Share Tech Mono", monospace;
+  color: inherit;
+  font-weight: 700;
+  font-size: 2.5em;
 }
-
+  
 #hard-mode {
   padding: 15px;
   border: 5px solid rgb(126, 178, 221);
   background: radial-gradient(ellipse at center, rgb(24, 66, 150) 0%, #000000 100%);
   border-radius: 0px 0px 0px 50px;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgb(10 175 230 / 0%);
+}
+
+#reset-game {
+  padding: 15px;
+  border: 5px solid rgb(126, 178, 221);
+  border-left: none;
+  background: radial-gradient(ellipse at center, rgb(24, 66, 150) 0%, #000000 100%);
+  border-radius: 0px 0px 50px 0px;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgb(10 175 230 / 0%);
+}
+
+.red-shadow {
+  padding: 1px;
+  color: rgb(218, 27, 27);
+  text-shadow: 0 0 20px rgb(218, 27, 27), 0 0 20px rgb(10 175 230 / 0%);
+}
+
+.green-shadow {
+  padding: 1px;
+  color: rgb(21, 176, 73);
+  text-shadow: 0 0 20px rgb(21, 176, 73), 0 0 20px rgb(10 175 230 / 0%);
+}
+
+@media screen and (max-width: 775px) {
+
+  body {
+    flex-direction: row;
+  }
+
+  header{
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 5vh;
+  }
+
+  #head {
+    flex-wrap: wrap;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  #head p{
+    font-size: 50px;
+  }
+
+  #rgb-placar {
+    padding: 15px;
+    font-size: 50px;
+  }
+
+  #container-balls{
+    border: 5px solid rgb(126, 178, 221);
+    border-bottom: none;
+    border-top: none;
+  }
 }
