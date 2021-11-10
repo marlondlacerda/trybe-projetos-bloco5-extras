@@ -1,58 +1,39 @@
+const createLetterButton = document.querySelector('#criar-carta');
+const inputText = document.querySelector('#carta-texto');
+const letterLocal = document.querySelector('#carta-gerada');
 
-
-function add() {
-  const cartaGerada = document.querySelector('#carta-gerada');
-  const criarCarta = document.querySelector('#carta-texto');
-
-  if (criarCarta.value === '') {
-    return alert ('Erro: Texto Vazio!');
+const removeChilds = () => {
+  while (letterLocal.firstChild) {
+    letterLocal.removeChild(letterLocal.firstChild);
   }
-  if (cartaGerada.hasChildNodes()) {
-    cartaGerada.remove();
-    const p = document.createElement('p');
-    p.id = 'carta-gerada';
-    document.querySelector('#carta').appendChild(p);
+};
 
-    const letterItem = criarCarta.value;
-    let letterString = String(letterItem);
-    let letterSplit = letterString.split(' ');
-    for (let index = 0; index < letterSplit.length; index++) {
-      const spanText = document.createElement('span');
-      spanText.className ='letterClass';
-      spanText.innerHTML = letterSplit[index];
-      p.appendChild(spanText);
-      console.log(letterSplit[index]);
-    }
-  } else {
-  const letterItem = criarCarta.value;
-  let letterString = String(letterItem);
-  let letterSplit = letterString.split(' ');
-  for (let index = 0; index < letterSplit.length; index++) {
-    const spanText = document.createElement('span');
-    spanText.className ='letterClass';
-    spanText.innerHTML = letterSplit[index];
-    cartaGerada.appendChild(spanText);
-    console.log(letterSplit[index]);
-  }
+const createLetter = (letterSplited) => {
+  letterSplited.forEach((element) => {
+    const span = document.createElement('span');
+    span.innerText = element;
+    letterLocal.appendChild(span);
+  });
+};
+
+const verifyLetter = () => {
+  const { value } = inputText;
+
+  if (value === '') return alert('Texto Vazio.');
+
+  if (!value.replace(/\s/g, '').length) {
+    // https://stackoverflow.com/a/10262019
+    letterLocal.innerText = 'por favor, digite o conteúdo da carta.';
+    return;
   }
 
-}
+  removeChilds();
 
-function result() {
-  const input = document.querySelector('#carta-texto');
-  const button = document.querySelector('#criar-carta');
+  const letterSplited = value.split(' ');
+  createLetter(letterSplited);
+};
 
-  button.addEventListener('click', add);
-  input.addEventListener('keypress', (verify) => {
-    if (verify.key === 'Enter') {
-      add();
-    }
-  })
-}
-
-
-
-window.onload = () => {
-result();
-
-}
+createLetterButton.addEventListener('click', () => verifyLetter());
+inputText.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') verifyLetter();
+});
