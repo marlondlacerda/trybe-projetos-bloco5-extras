@@ -68,34 +68,11 @@
 
 - [x] 5 - Clicar em um circulo colorido, deve ser mostrado um texto indicando se está correto.
 
-[x] 6 - Crie um botão para iniciar/reiniciar o jogo
+- [x] 6 - Crie um botão para iniciar/reiniciar o jogo.
 
 ### BÔNUS
 
-
-  ✦ As bordas devem ser acrescentadas ao container, identificado como <code>meme-image-container</code>;
-
-  ✦ Os três botões devem ser elementos do tipo <code>button</code>;
-
-  ✦ Cada elemento <code>button</code> deve ser estilizado de forma a ter a cor de fundo da mesma cor que a moldura que irá colocar no container;
-
-  ✦ Cada <code>button</code> deve ter o respectivo <code>id</code> e estilizar o container conforme especificado:
-
-  - Um botão identificado com o <code>id</code> chamado <code>fire</code> deve estilizar o container da imagem com uma borda de 3 pixels, dashed e vermelha.
-
-  - Um botão com <code>id</code> chamado <code>water</code> deve estilizar o container da imagem com uma borda azul, com 5 pixels do tipo double .
-
-  - Um botão com <code>id</code> chamado <code>earth</code> deve estilizar o container da imagem com uma borda do tipo groove, verde e com 6 pixels.
-
-  ✦ Após uma das três bordas ser selecionada, a borda padrão especificada no requisito 3 não deve mais aparecer;
-
-
-- [x] 7 - Tenha um conjunto de quatro imagens pré prontas de memes famosos para o usuário escolher. Mostre miniaturas das imagens e, mediante clique do usuário, essa imagem deve aparecer dentro da moldura do elemento de container.
-  - O elemento que mostra as miniaturas dos memes deve ser identificado um um <code>id</code> denominado <code>meme-1</code> para o primeiro meme, <code>meme-2</code> para o segundo, <code>meme-3</code> para o terceiro e <code>meme-4</code> para o quarto.
-
-  - As imagens que identificam os memes devem ficar dentro da aplicação, num diretório chamado imgs com os respectivos nomes <code>meme1.png</code>, <code>meme2.png</code>, <code>meme3.png</code> e <code>meme4.png</code>. Atenção também para o formato das imagens! ⚠️
-
-  - As imagens devem aparecer dentro do container de forma análoga às imagens enviadas por upload para a página.
+- [x] 7 - Crie um placar que incremente 3 pontos para cada acerto no jogo
 
 ### RECURSOS ADICIONAIS DESENVOLVIDOS POR MIM
 - [x] 8 - Adicione um novo botão de borda que volte para o padrão.
