@@ -75,6 +75,16 @@ header {
   height: 90px;
   border-radius: 50%;
   border: 2px solid;
+
+  -moz-transition-property: opacity;
+  -moz-transition-duration: 2s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 2s;
+  opacity: 0;
+}
+
+.ball.fadeIn {
+  opacity: 1;
 }
 
 .selected {
@@ -112,16 +122,22 @@ header {
   text-shadow: 0 0 20px #0aafe6, 0 0 20px rgb(10 175 230 / 0%);
 }
 
+#score{ 
+  transition: color 0.5s ease;
+}
+
 .red-shadow {
   padding: 1px;
   color: rgb(218, 27, 27);
   text-shadow: 0 0 20px rgb(218, 27, 27), 0 0 20px rgb(10 175 230 / 0%);
+  transition: color 0.5s ease;
 }
 
 .green-shadow {
   padding: 1px;
   color: rgb(21, 176, 73);
   text-shadow: 0 0 20px rgb(21, 176, 73), 0 0 20px rgb(10 175 230 / 0%);
+  transition: color 0.5s ease;
 }
 
 @media screen and (max-width: 775px) {

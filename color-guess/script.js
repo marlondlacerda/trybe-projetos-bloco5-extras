@@ -17,7 +17,7 @@ const randomColorGenerator = () => {
 };
 
 const selectAColor = () => {
-  const balls = document.querySelectorAll('.ball');
+  const balls = document.querySelectorAll(ball);
   // source https://stackoverflow.com/questions/7595557/selecting-a-random-html-element-using-javascript-only
   const ballIndex = Math.floor(Math.random() * balls.length);
   return removeRgbText(balls[ballIndex].style.backgroundColor);
@@ -36,6 +36,9 @@ const ballMaker = () => {
     buttonBall.style.backgroundColor = randomColorGenerator();
     buttonBall.className = 'ball';
     ballsContainer.appendChild(buttonBall);
+
+    const x = buttonBall.clientHeight;
+    buttonBall.className = 'ball fadeIn'
   }
 };
 
@@ -71,7 +74,6 @@ const newGame = () => {
   answer.innerText = 'Escolha uma cor';
   ballMaker();
   colorSelected.innerText = selectAColor();
-
   balls.forEach((element) => {
     const button = element;
     button.disabled = false;
