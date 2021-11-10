@@ -62,20 +62,16 @@
 
 - [x] 2 - Adicione um texto com o código RGB a ser adivinhado.
 
-- [x] 3 - Adicione a página opções de cores para serem adivinhadas
+- [x] 3 - Adicione a página opções de cores para serem adivinhadas.
 
-- [x] 4 - Adicione o texto que será inserido sobre a imagem deve ter uma cor, sombra e tamanho específicos.
-  - O texto do elemento <code>meme-text</code> deve ter uma sombra preta, de 5 pixels na horizontal, 5 pixels na vertical e um raio de desfoque de 5 pixels;
+- [x] 4 - Adicione cores nas bolas elas devem ser geradas dinâmicamente.
 
-  - O texto do elemento <code>meme-text</code> deve ter a fonte com o tamanho de 30 pixels;
+- [x] 5 - Clicar em um circulo colorido, deve ser mostrado um texto indicando se está correto.
 
-  - O texto do elemento <code>meme-text</code> deve estar na cor branca.
-
-- [x] 5 - Limite o tamanho do texto que o usuário pode inserir.
-  - A quantidade máxima de caracteres digitáveis no elemento <code>text-input</code> deve ser 60.
+[x] 6 - Crie um botão para iniciar/reiniciar o jogo
 
 ### BÔNUS
-- [x] 6 - Permita a quem usa customizar o meme escolhido acrescentando a ele uma de três bordas. A página deve ter três botões, que ao serem clicados devem cada um trocar a própria borda ao redor do container.
+
 
   ✦ As bordas devem ser acrescentadas ao container, identificado como <code>meme-image-container</code>;
 
