@@ -59,35 +59,58 @@
     <summary>Requisitos do projeto</summary>
 
 - [x] 1 - Adicione no seu site um título com o nome do seu jogo.
+  - Será verificado se o <code>id</code> do título é </code>title</code>.
 
 - [x] 2 - Adicione um texto com o código RGB a ser adivinhado.
+  - Será verificado se o seu <code>id</code> deve ser <code>rgb-color</code>;
+  - Será verificado se o texto deve conter os três números das cores RGB a ser adivinhada, no seguinte formato: <code>(168, 34, 1)</code>.
 
 - [x] 3 - Adicione a página opções de cores para serem adivinhadas.
+  - Será verificado que deve conter 6 circulos como opção de cor de adivinhação;
+  - Será verificado que a <code>class</code> de todos os circulos deve ser <code>ball</code>.
 
 - [x] 4 - Adicione cores nas bolas elas devem ser geradas dinâmicamente.
+  - Será verificado que ao carregar a página, as cores de cada um dos 6 circulos coloridos deve ser geradas via JavaScript.
 
 - [x] 5 - Clicar em um circulo colorido, deve ser mostrado um texto indicando se está correto.
+  - Será verificado que o seu <code>id</code> do elemento deve ser <code>answer</code>;
+  - Será verificado que quando o jogo é iniciado, o texto exibido deve ser <code>"Escolha uma cor"</code>;
+  - Será verificado se o circulo colorido for o **correto**, deve ser exibido o texto <code>"Acertou!"</code>;
+  - Será verificado se o circulo colorido for o **incorreta**, deve ser exibido o texto <code>"Errou! Tente novamente!"</code>.
 
 - [x] 6 - Crie um botão para iniciar/reiniciar o jogo.
-
+  - Será verificado que o botão deve ter o `id` `reset-game`;
+  - Será verificado que ao clicar no botão, novas cores devem ser geradas via JavaScript e o elemento `rgb-color` deve ser atualizado;
+  - Será verificado que ao clicar no botão, o elemento `answer` deve voltar ao estado inicial, exibindo o texto `"Escolha uma cor"`.
 ### BÔNUS
 
-- [x] 7 - Crie um placar que incremente 3 pontos para cada acerto no jogo
+- [x] 7 - Crie um placar que incremente 3 pontos para cada acerto no jogo.
+  - Será verificado que o elemento deve ter o `id` `score`;
+  - Será verificado que o valor inicial dele deve ser 0;
+  - Será verificado que a cada acerto, é incrementado 3 pontos ao placar;
+  - Será verificado que ao clicar no botão reiniciar, o placar **NÃO** deve ser resetado.
 
 ### RECURSOS ADICIONAIS DESENVOLVIDOS POR MIM
-- [x] 8 - Adicione um novo botão de borda que volte para o padrão.
-  - A cor de fundo deve ser a padrão.
-  - O elemento deve possuir a <code>classe</code> denominada <code>eraser</code>
-  - O <code>id</code> deve ser chamado <code>default</code> deve estilizar o container da imagem com uma borda preta, com 1 pixels do tipo solid.
+- [x] 8 - Adicione um novo botão para dificultar o Jogo.
+  - O Botão deve se chamar HARD MODE e ficar ao lado do Botão de Resetar.
+  - O elemento deve possuir o <code>id</code> denominada <code>hard-mode</code>
+  - Ao clicar nesse botão, deverá adicionar 6 novas cores ao jogo resetando o jogo anterior e mantendo os pontos.
+  - A cada acerto nessa dificuldade, deverá ser somado 6 pontos.
 
-- [x] 9 - Crie três inputs do tipo radio para que possa mudar o texto de lugar.
-  - Os inputs devem ser chamados de começo, meio e fim. O botão começo deve ser selecionado por padrão
-  - Ao clicar em qualquer um desses botões, o texto muda de lugar
+- [x] 9 - Faça que o botão HARD MODE tenha um status de ON e OFF.
+  - O elemento deve possuir o <code>id</code> denominada <code>hard-status</code>
+  - Ao clicar no botão, o status deve mudar para ON e aumentar a dificuldade, ao ser clicado de novo, voltar para a dificuldade normal.
 
-- [x] 10 - Adicione um botão com a funcionalidade de salvar o meme em imagem.
-  - O button com a <code>class</code> chamada <code>save</code> possui a lógica de poder conseguir fazer com o que meme criado seja salvo na máquina do usuário.
+- [x] 10 - Adicione efeitos de transições nas bolas.
+  - Ao gerar novas cores, selecionar ou mudar a dificuldade, as bolas devem ter um efeito de transição.
 
-- [x] 11 - Faça com que o aplicativo seja responsivo.
+- [x] 11 - Adicione efeitos de transições no status do HARD MODE e na pontuação.
+  - Ao clicar no botão HARD MODE, o status ON e OFF terá um efeito de sombra vermelho para OFF e green para ON.
+  - Quando a pontuação estiver positiva, terá um efeito de sombra verde.
+  - Qando estiver negativa vermelha.
+  - Quando voltar para 0 deverá possuir a sombra padrão.
+
+- [x] 12 - Faça com que o aplicativo seja responsivo.
 </details>
 
 ---
