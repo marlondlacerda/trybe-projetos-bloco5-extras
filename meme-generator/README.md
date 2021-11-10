@@ -19,7 +19,7 @@
 ---
 
 <div align="center">
-  <img src="./images/preview.gif">
+  <img src="./images/preview.png">
 </div>
 
 ## HABILIDADES
