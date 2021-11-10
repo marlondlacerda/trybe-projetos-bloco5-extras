@@ -139,6 +139,7 @@ header {
   #head {
     flex-wrap: wrap;
     border-radius: 50px 50px 0px 0px;
+    margin: 0 15px;
   }
 
   #head p{
@@ -154,5 +155,11 @@ header {
     border: 5px solid rgb(126, 178, 221);
     border-bottom: none;
     border-top: none;
+    margin: 0 15px;
+  }
+
+  #buttons-container { 
+    margin: 0 15px;
+    padding-bottom: 15px;
   }
 }
