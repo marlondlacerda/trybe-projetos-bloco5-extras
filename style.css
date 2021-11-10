@@ -42,10 +42,10 @@
   transform: rotate(5deg);
 }
 
-skewleft {
+.skewleft {
   transform: skewX(10deg);
 }
 
-skewright {
+.skewright {
   transform: skewX(-10deg);
 }
