@@ -13,7 +13,7 @@
 
 ## Preview
 <div align="left" style="display: inline_block">
-  <a href="https://https://marlondlacerda-mistery-letter.vercel.app/">Clique aqui</a> para ter acesso a um preview do App.
+  <a href="https://marlondlacerda-mistery-letter.vercel.app/">Clique aqui</a> para ter acesso a um preview do App.
 </div>
 
 ---
@@ -70,8 +70,8 @@
 
   Pontos importantes:
 
-    * Cada palavra deve aparecer dentro de uma tag `span`.
-    * As tags `span` devem ser adicionadas como filhas do parágrafo que possui o id `carta-gerada`.
+    ``` * Cada palavra deve aparecer dentro de uma tag `span`.```
+    ```* As tags `span` devem ser adicionadas como filhas do parágrafo que possui o id `carta-gerada`.```
 
 - Será validado que existe um elemento `button` com `id="criar-carta"`
 
